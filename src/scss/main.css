@@ -1,0 +1,142 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+:root {
+  --page-background: #212123;
+  --header-font-color: #B8B8B8;
+  --black-color: #191919;
+}
+
+body {
+  background-color: var(--page-background);
+}
+
+.container {
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  color: var(--header-font-color);
+}
+
+.header__row {
+  padding: 21px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.user-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user-field img {
+  background-color: var(--black-color);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.header__search {
+  background-color: var(--black-color);
+  border-radius: 6px;
+}
+.header__search .form {
+  padding: 7px 10px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 20px;
+}/*# sourceMappingURL=main.css.map */
