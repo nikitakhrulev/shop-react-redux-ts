@@ -1,0 +1,26 @@
+.worth {
+    padding: 20px 0;
+    text-align: center;
+    color: var(--white-color);
+    img {
+        margin-bottom: 20px;
+    }
+}
+.worth__content {
+    padding: 22px 0 26px;
+    background-color: var(--black-color);
+    border-radius: 6px;
+}
+.worth__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.worth__title-wrapper {
+    margin-bottom: 24px;
+}
+.worth__category {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--white-color);
+}
