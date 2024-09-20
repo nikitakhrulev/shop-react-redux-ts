@@ -1,0 +1,25 @@
+.footer {
+    padding: 19px 0 24px;
+}
+.footer__socials-list {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.developed-by {
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--grey-color);
+
+    span {
+        color: var(--purple-color);
+    }
+}
+.footer__content {
+    border-radius: 6px;
+    padding: 24px;
+    background-color: var(--black-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

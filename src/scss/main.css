@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset and base styles  */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
@@ -351,4 +352,110 @@ body {
   font-weight: 600;
   font-size: 20px;
   color: var(--white-color);
+}
+
+.sale {
+  padding-bottom: 36px;
+}
+
+.sale__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__items {
+  position: relative;
+  background-color: var(--black-color);
+  font-weight: 300;
+  font-size: 70px;
+  text-align: center;
+  color: var(--purple-color);
+  width: 100%;
+}
+.content__items span {
+  font-size: 150px;
+}
+.content__items .text {
+  padding-top: 74px;
+  display: inline-block;
+  padding-right: 50px;
+}
+
+.santa__img {
+  flex-shrink: 0;
+  position: relative;
+  display: inline-block;
+}
+.santa__img img {
+  width: 100%; /* Чтобы изображение растягивалось на весь блок */
+  height: auto;
+}
+
+.santa__text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: var(--page-background);
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  transform: translate(0px, -24px);
+}
+.santa__text span {
+  font-weight: 700;
+  color: var(--purple-color);
+}
+
+.content__sneaker {
+  position: absolute;
+  z-index: 9;
+  transform: translate(-30px, -80px);
+}
+
+.content__console {
+  position: absolute;
+  z-index: 9;
+  right: 0;
+  transform: translate(20px, 50px);
+}
+
+.sale__btn {
+  text-align: center;
+  margin-top: -30px;
+}
+.sale__btn button {
+  font-weight: 600;
+  font-size: 16px;
+  background-color: var(--purple-color);
+  padding: 9px 20px;
+  border-radius: 6px;
+  color: var(--white-color);
+}
+
+.footer {
+  padding: 19px 0 24px;
+}
+
+.footer__socials-list {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.developed-by {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--grey-color);
+}
+.developed-by span {
+  color: var(--purple-color);
+}
+
+.footer__content {
+  border-radius: 6px;
+  padding: 24px;
+  background-color: var(--black-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
