@@ -7,7 +7,7 @@ function Less() {
                 <div className="trending__title-wrapper">
                     <h2 className="trending__title title">Less than 100$</h2>
                 </div>
-                <ul className="trending__list">
+                {/* <ul className="trending__list">
                     <li className="trending__item">
                         <ListItem />
                     </li>
@@ -23,7 +23,7 @@ function Less() {
                     <li className="trending__item">
                         <ListItem />
                     </li>
-                </ul>
+                </ul> */}
                 <div className="trending__btn">
                     <button>See more</button>
                 </div>
