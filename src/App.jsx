@@ -1,18 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './scss/main.css'
-import { Header } from './components/layout/Header';
-import { First } from './components/layout/First';
-import { Trending } from './components/layout/Trending';
-import { Worth } from './components/layout/Worth';
-import { NYSale } from './components/layout/NYSale';
-import { Footer } from './components/layout/Footer';
-import { Less } from './components/layout/Less';
-import { Sidenav } from './components/layout/Sidenav';
-// import { getCheap } from './components/services/requests/getCheap';
+import { getCheap } from './redux/cheap/cheap-actions';
 import { getTrending } from './redux/trending/trending-actions';
 import { getCategories } from './redux/categories/categories-actions';
 import { useDispatch } from 'react-redux';
+import { getWorth } from './redux/worth/worth-actions';
+import { Homepage } from './components/routes/Homepage';
+import { Product } from './components/routes/Product';
 
 function App() {
   const dispatch = useDispatch();
@@ -20,19 +16,17 @@ function App() {
   useEffect(() => {
     dispatch(getTrending())
     dispatch(getCategories())
+    dispatch(getCheap())
+    dispatch(getWorth())
   }, [])
   return (              
     <div className="App">
-      <>
-        <Header />
-        <First />
-        <Trending />
-        <Worth />
-        <NYSale />
-        <Less />
-        <Footer />
-        <Sidenav />
-      </>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={ <Homepage />} />
+          <Route path='/product/:id' element={ <Product />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

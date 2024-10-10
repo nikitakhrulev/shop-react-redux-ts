@@ -3,7 +3,7 @@ interface Category {
     image: string;
 }
 
-export interface TredingItem {
+export interface CardItem {
     id: number,
     title: string,
     price: number,

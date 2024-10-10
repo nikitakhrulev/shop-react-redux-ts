@@ -3,7 +3,6 @@ import { useSelector } from "react-redux"
 function Categories() {
 
     const categories = useSelector(state => state.categories);
-    console.log(categories)
 
     return <div className="categories">
             <div className="categories__content">
@@ -13,7 +12,7 @@ function Categories() {
                         categories.map((category) => (
                             category.name === 'dsd' ?
                             '' :
-                            <li className="categories__item"><a href="#!">{category.name}</a></li>
+                            <li className="categories__item" key={category.id}><a href="#!">{category.name}</a></li>
                         ))
                     }
                 </ul>

@@ -7,7 +7,7 @@ export const addCategories = (categories) => ({
 
 
 export const getCategories = () => (dispatch) => {
-    fetch('https://api.escuelajs.co/api/v1/categories')
+    fetch('https://api.escuelajs.co/api/v1/categories?limit=5')
         .then(response => response.json())
         .then(data => dispatch(addCategories(data)))
 }

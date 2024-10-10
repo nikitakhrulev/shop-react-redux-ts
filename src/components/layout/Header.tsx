@@ -1,15 +1,18 @@
+import { Link } from 'react-router-dom';
+
 import logo from '../../img/logo.svg';
 import user from '../../img/user.svg';
 import favorite from '../../img/favorite.svg';
 import cart from '../../img/cart.svg';
 import search from '../../img/search.svg';
-import { ArrayTypeNode, TupleType } from 'typescript';
 
 function Header() {
     return <header className="header">
         <div className="container">
             <div className="header__row">
+                <Link to={'/'}>
                 <img src={logo} alt="logo" />
+                </Link>
                 <div className="user-field">
                     <div className="user-field">
                         <img src={user} alt="user" />

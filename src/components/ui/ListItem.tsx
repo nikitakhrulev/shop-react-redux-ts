@@ -1,9 +1,8 @@
 import item from '../../img/item.png';
-import { TredingItem } from '../../Interface/TredingItem';
+import { CardItem } from '../../Interface/TrendingItem';
 
-function ListItem({ data }: { data: TredingItem }) {
-    const { title, price, description, images, category: {name, image}} = data;
-    console.log(data)
+function ListItem({ data }: { data: CardItem }) {
+    const { title, price, category: {name, image}} = data;
     return <div className="list__item-wrapper">
         <img src={image} alt="item" />
         <div className="list__item-content">
