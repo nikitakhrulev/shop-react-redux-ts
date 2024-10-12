@@ -6,11 +6,7 @@ export const cartReducer = (cart = [], action) => {
         case ADD_TO_CART: {
             return [
                 ...cart,
-                {
-                //   id: ++nextTodoId,  - создаем объект товара
-                //   title: action.title,
-                //   completed: false,
-                },
+               action.payload
               ];
         }
         /// remove from cart

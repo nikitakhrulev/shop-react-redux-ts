@@ -78,6 +78,7 @@
 }
 .size__list {
     display: flex;
+    gap: 5px;
 }
 .product__info-descr {
     width: 100%;
@@ -100,4 +101,21 @@
     background-color: var(--grey-color);
     padding: 9px 20px;
     border-radius: 6px;
+}
+.size__item {
+    background-color: var(--page-background);
+    border-radius: 8px;
+}
+.size__item-active {
+    background-color: var(--purple-color);
+    p {
+        color: var(--white-color)!important;
+    }
+    .size__item-wrapper {
+        padding: 4px 8px;
+    }
+}
+.size__item-wrapper {
+    padding: 4px 6px;
+    margin: 0!important;
 }

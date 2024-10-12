@@ -1,8 +1,10 @@
 import { ListItem } from "../ui/ListItem";
 import { useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
 function Trending() {
     const trending = useSelector(state => state.trending);
+    console.log(trending)
     trending.forEach(el => console.log(el))
     return <div className="trending">
         <div className="container">
@@ -13,7 +15,9 @@ function Trending() {
                 <ul className="trending__list">
                     {trending.map((item) => (
                         <li className="trending__item" key={item.id}>
-                            <ListItem data={item}/>
+                           <Link to={`/product/${item.id}`}>
+                                <ListItem data={item}/>
+                            </Link>
                         </li>
                     ))}
                 </ul>

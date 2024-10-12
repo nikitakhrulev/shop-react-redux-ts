@@ -1,6 +1,6 @@
 import { ListItem } from "../ui/ListItem"
 import { useSelector } from "react-redux"
-
+import { Link } from "react-router-dom"
 
 function Cheap() {
     const cheap = useSelector(state => state.cheap)
@@ -15,7 +15,9 @@ function Cheap() {
                     {
                         cheap.map((item) => (
                             <li className="trending__item" key={item.id}>
+                               <Link to={`/product/${item.id}`}>
                                 <ListItem data={item}/>
+                            </Link>
                             </li>
 
                         ))

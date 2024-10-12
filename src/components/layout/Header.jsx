@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useSelector, UseSelector } from 'react-redux';
 
 import logo from '../../img/logo.svg';
 import user from '../../img/user.svg';
@@ -7,6 +8,8 @@ import cart from '../../img/cart.svg';
 import search from '../../img/search.svg';
 
 function Header() {
+    const cartAmount = useSelector(store => store.cart).length;
+    
     return <header className="header">
         <div className="container">
             <div className="header__row">
@@ -27,7 +30,10 @@ function Header() {
                 </div>
                 <div className="header__actions">
                     <img src={favorite} alt="favorite" />
+                    <Link to={'/Cart'}>
                     <img src={cart} alt="cart" />
+                    <div className="cart__amount">{cartAmount}</div>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -2,9 +2,9 @@ import item from '../../img/item.png';
 import { CardItem } from '../../Interface/TrendingItem';
 
 function ListItem({ data }: { data: CardItem }) {
-    const { title, price, category: {name, image}} = data;
+    const { title, price, images, category: {name}} = data;
     return <div className="list__item-wrapper">
-        <img src={image} alt="item" />
+        <img src={images[0]} alt="item" />
         <div className="list__item-content">
             <h3 className="item__name">{title}</h3>
             <span className="item__category">{name}</span>

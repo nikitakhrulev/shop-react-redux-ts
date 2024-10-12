@@ -6,9 +6,9 @@ import { getCheap } from './redux/cheap/cheap-actions';
 import { getTrending } from './redux/trending/trending-actions';
 import { getCategories } from './redux/categories/categories-actions';
 import { useDispatch } from 'react-redux';
-import { getWorth } from './redux/worth/worth-actions';
 import { Homepage } from './components/routes/Homepage';
 import { Product } from './components/routes/Product';
+import { Cart } from './components/routes/Cart';
 
 function App() {
   const dispatch = useDispatch();
@@ -17,7 +17,6 @@ function App() {
     dispatch(getTrending())
     dispatch(getCategories())
     dispatch(getCheap())
-    dispatch(getWorth())
   }, [])
   return (              
     <div className="App">
@@ -25,6 +24,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <Homepage />} />
           <Route path='/product/:id' element={ <Product />} />
+          <Route path='/cart' element={ <Cart />} />
         </Routes>
       </BrowserRouter>
     </div>
